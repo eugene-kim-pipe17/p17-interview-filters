@@ -1,0 +1,26 @@
+{
+  "name": "p17-interview-filters",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "compile": "tsc --noEmit",
+    "format": "prettier --write .",
+    "seed": "tsx src/seedTestData.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.8"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  }
+}
