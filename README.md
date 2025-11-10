@@ -1,3 +1,6 @@
+# Task
+Fill out the filters.ts and filter.test.ts files to implement an entity filter of your own design.
+
 # Instructions
 1. Run `npm install` to install the dependencies.
 1. Look at the screenshot.png file. Discuss how you think the filter might work from the user's perspective (not how it's implemented). The `All` option can be either `All` or `Any`.
