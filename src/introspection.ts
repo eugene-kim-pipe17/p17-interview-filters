@@ -23,7 +23,6 @@ export type FilterOperator =
   | "gte"
   | "lt"
   | "lte"
-  | "between"
   // DateTime operators
   | "before"
   | "after"
@@ -81,12 +80,11 @@ function getOperatorsForType(type: FieldType): FilterOperator[] {
         "not_equals",
         "before",
         "after",
-        "between",
         "in_last",
         "older_than",
       ];
     case "number":
-      return ["equals", "not_equals", "gt", "gte", "lt", "lte", "between"];
+      return ["equals", "not_equals", "gt", "gte", "lt", "lte"];
     case "enum":
     case "native_enum":
       return ["equals", "not_equals", "is_one_of", "is_not_one_of"];
