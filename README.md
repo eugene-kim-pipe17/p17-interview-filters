@@ -1,6 +1,14 @@
+# Instructions
+1. Run `npm install` to install the dependencies.
+1. Look at the screenshot.png file. Discuss how you think the filter might work. The `All` option can be either `All` or `Any`.
+1. Look at the order-schema-filters.json file. This is the schema that the filter will be applied to.
+1. You can run tests with `npm run test`.
+1. You can run type checking with `npm run compile`.
+1. Fill out filters.ts and filter.test.ts to implement the filter.
+
 # Guidelines
 
-- Work iteratively. Get small chunks of work done and then move onto the next.
+- Work iteratively. Get small chunks of work done and then move onto the next. Describe what that might look like to you.
 
 # AI Tools During Your Interview
 

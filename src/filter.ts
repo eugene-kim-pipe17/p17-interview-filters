@@ -1,7 +1,8 @@
 import { Order } from "./types";
 
 export type Filter = {
-  // TODO: Define this type
+  // TODO: Define this type to match the complete "Advanced Filter" from the screenshot
+  // Value types don't need to depend on the path type
 };
 
 /**
