@@ -77,7 +77,6 @@ const FIELD_TYPE_OPERATORS = {
     "gte",
     "lt",
     "lte",
-    "between",
   ] as const,
   enum: ["equals", "not_equals", "is_one_of", "is_not_one_of"] as const,
   datetime: [
@@ -85,7 +84,6 @@ const FIELD_TYPE_OPERATORS = {
     "not_equals",
     "before",
     "after",
-    "between",
     "in_last",
     "older_than",
   ] as const,
@@ -99,7 +97,6 @@ type FlattenedField = {
   type: string;
   isOptional: boolean;
   enumValues?: string[];
-  arrayItemType?: string;
 };
 
 /**
