@@ -6,6 +6,12 @@ Fill out the filter.ts and filter.test.ts files to implement an entity filter of
 
 ![Filter Demo](filter.gif)
 
+Plain english description of the filter above:
+The user wants to see orders where ALL the following conditions are true:
+* The order's shipping address' country starts with "United States"
+* The order's status equals "Refunded"
+* The order's currency is "USD"
+
 In Pipe17, eCommerce merchants filter orders using our Advanced Filter interface (shown above). Users can:
 - Filter by multiple fields (e.g., "Billing Address Address 1 equals '123 Main St'")
 - Choose how conditions are evaluated (All/Any)

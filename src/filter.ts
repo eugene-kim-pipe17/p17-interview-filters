@@ -1,6 +1,7 @@
 import { Order } from "./internal/orders";
 
 export type Filter = {
+  assessmentMode: "all" | "any";
   // TODO: Define this type/schema to represent the complete "Advanced Filter" from the screenshot
   //
   // Think of a "type" as defining the shape/structure of data:
@@ -15,6 +16,7 @@ export type Filter = {
   // you're most familiar with, and we can use AI to translate it to TypeScript.
   //
   // Note: You can add some type safety, but don't spend time on multi-layered generic constraints - that's out of scope for this interview
+
 };
 
 /**
