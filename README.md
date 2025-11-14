@@ -4,6 +4,12 @@ Fill out the filter.ts and filter.test.ts files to implement an entity filter of
 
 ## Context
 
+In Pipe17, eCommerce merchants filter orders using our Advanced Filter interface (shown above). Users can:
+- Filter by multiple fields (e.g., "Billing Address Address 1 equals '123 Main St'")
+- Choose how conditions are evaluated (All/Any)
+- Add any number of conditions
+
+Filter Demo and Example:
 ![Filter Demo](filter.gif)
 
 Plain english description of the filter above:
@@ -12,12 +18,9 @@ The user wants to see orders where ALL the following conditions are true:
 * The order's status equals "Refunded"
 * The order's currency is "USD"
 
-In Pipe17, eCommerce merchants filter orders using our Advanced Filter interface (shown above). Users can:
-- Filter by multiple fields (e.g., "Billing Address Address 1 equals '123 Main St'")
-- Choose how conditions are evaluated (All/Any)
-- Add any number of conditions
-
-Your task is to design the data structure (type/schema) for this filter and implement the logic to evaluate whether an order matches the filter criteria.
+Your task is to
+(1) design the data structure (type/schema) for the order filter and
+(2) implement the logic to evaluate whether an order matches the filter criteria.
 
 **Important:** The Filter is pure data (like JSON/DTO) that gets persisted to the database. You'll define the Filter type and implement `evaluateFilter` to evaluate it.
 
