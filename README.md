@@ -6,11 +6,10 @@ Fill out the filters.ts and filter.test.ts files to implement an entity filter o
 
 ![Filter Demo](filter.gif)
 
-In Pipe17, our users are eCommerce merchants who need to filter orders in our web application based on specific criteria. The image above shows our Advanced Filter interface where users can:
-- Filter by multiple order fields (e.g., "Billing Address Address 1 equals '123 Main St'" and "Status equals 'Refunded'")
-- Choose how conditions are evaluated.
-- Add any number of conditions.
-- Apply filters to view only orders that match their criteria
+In Pipe17, eCommerce merchants filter orders using our Advanced Filter interface (shown above). Users can:
+- Filter by multiple fields (e.g., "Billing Address Address 1 equals '123 Main St'")
+- Choose how conditions are evaluated (All/Any)
+- Add any number of conditions
 
 Your task is to design the data structure (type/schema) for this filter and implement the logic to evaluate whether an order matches the filter criteria.
 
@@ -20,11 +19,9 @@ Your task is to design the data structure (type/schema) for this filter and impl
 
 1. Run `npm install` to install the dependencies.
 
-2. **Examine the flattened order schema in `src/types.ts`:**
-   - We've flattened the nested Order object structure for your convenience
-   - This means nested properties like `billingAddress.addressLine1` appear in the dropdown alongside top-level properties like `status`
-   - For example, instead of having separate dropdowns for "billingAddress" → "addressLine1", users can directly select "billingAddress.addressLine1" as a field path
-   - The `FlattenedOrderSchema` shows all available field paths, their types, and valid operators
+2. **Examine `src/types.ts`:**
+   - `FlattenedOrderSchema` shows all available field paths, types, and valid operators
+   - Nested properties like `billingAddress.addressLine1` appear alongside top-level properties like `status`
 
 3. Look at screenshot.png or filter.gif to understand the user interface and discuss how you think the filter works from the user's perspective (not how it's implemented).
 
@@ -36,11 +33,11 @@ Your task is to design the data structure (type/schema) for this filter and impl
 
 # Recommended Approach
 
-1. **Understand the problem** - Discuss what the filter needs to represent and how it should work.
+1. **Understand the problem** - Discuss what the filter represents and how it works.
 
-2. **Design the filter type** - Define the data structure (see src/filter.ts). Explain your reasoning for each field in the structure.
+2. **Design the filter type** - Define the data structure (see src/filter.ts). Explain your reasoning.
 
-3. **Implement the evaluateFilter function** - Let's discuss an approach and then break the problem into discrete, verifiable steps. After each step, write tests for that chunk of work.
+3. **Implement evaluateFilter** - Discuss approach, then break into discrete steps. Write tests after each step.
 
 # Guidelines
 
@@ -56,50 +53,45 @@ I'm curious about how you think and approach problems. Here's the workflow I'd l
 
 ### Phase 1: Type/Schema Design (Discussion First)
 
-**Before using AI**, let's discuss:
-- Your understanding of how the filter should work
-- What the schema/data structure should look like
-- Your rationale for each field and design decision
+**Before using AI**, discuss:
+- How the filter should work
+- What the data structure should look like
+- Your rationale for each design decision
 
-**Don't worry if you're not familiar with TypeScript specifically** — you can use terms you're comfortable with:
-- Java interfaces or classes
-- Python type hints or dataclasses
-- Go structs
-- JSON schema
-- Or just plain English descriptions of the data structure
+**Not familiar with TypeScript?** Use terms you know: Java interfaces/classes, Python type hints/dataclasses, Go structs, JSON schema, or plain English.
 
-The key is that we come to an agreement on the design and you can explain your reasoning.
+The key: explain your reasoning and agree on the design.
 
 ### Phase 2: Translation to TypeScript (AI Can Help)
 
-If you need help translating your design into TypeScript syntax, AI can assist here. This is where tooling should accelerate your work, not replace your thinking.
+AI can help translate your design to TypeScript syntax. Use tooling to accelerate, not replace thinking.
 
 ### Phase 3: Implementation (Incremental and Verified)
 
-This is critical: **I want to see small chunks of functionality implemented and tested incrementally.**
+**Critical: Implement and test small chunks incrementally.**
 
-For each chunk of work:
+For each chunk:
 
-1. **Your thoughts first**: Explain how you want to implement this piece. What's your approach?
+1. **Your thoughts first**: Explain your approach for this piece.
 
-2. **AI implements**: You can ask AI to write the code for that specific chunk.
+2. **AI implements**: Ask AI to write code for this chunk.
 
-3. **Discuss tests**: Talk through what tests we should write for this chunk. What cases need coverage?
+3. **Discuss tests**: What tests are needed? What cases?
 
 4. **AI writes tests**: Have AI write the tests you identified.
 
-5. **Your critique**: Review the code AI generated. What do you think? Would you change anything? Why?
+5. **Your critique**: Review the AI code. What would you change? Why?
 
-**Why incremental?** In the real world, having AI generate all the code at once makes things harder to reason about and less likely to succeed. Small, verified chunks lead to better outcomes and demonstrate ownership.
+**Why incremental?** Generating all code at once is harder to reason about and less likely to succeed. Small, verified chunks demonstrate ownership.
 
 ## What Good Looks Like
 
-- **Thoughtful prompting** — Describe problems clearly with context and constraints
-- **Your reasoning** — Explain how you break down problems, evaluate trade-offs, and make decisions
-- **Critical review** — Critique AI output on correctness, structure, naming, and style
-- **Ownership** — Verify outputs, run tests, and understand before adopting
-- **Adaptability** — When things break, explain your adjustments
-- **Engineering taste** — Clear, maintainable, safe code with good test coverage
+- **Thoughtful prompting** — Clear problem descriptions with context and constraints
+- **Your reasoning** — Explain problem breakdown, trade-offs, and decisions
+- **Critical review** — Critique AI output on correctness, structure, naming, style
+- **Ownership** — Verify, test, and understand before adopting
+- **Adaptability** — Explain adjustments when things break
+- **Engineering taste** — Clear, maintainable, safe code with good tests
 
 ## What to Avoid
 
