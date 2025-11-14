@@ -6,8 +6,7 @@
   "scripts": {
     "test": "vitest run",
     "compile": "tsc --noEmit",
-    "format": "prettier --write .",
-    "seed": "tsx src/seedTestData.ts"
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",

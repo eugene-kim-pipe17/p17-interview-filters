@@ -67,10 +67,7 @@ export const FIELD_TYPE_OPERATORS = {
   boolean: ["equals"] as const,
 };
 
-export const OrderFilterSchema = {
-  "schemaName": "OrderSchema",
-  "generatedAt": "2025-11-10T19:48:30.566Z",
-  "totalFields": 34,
+export const FlattenedOrderSchema = {
   "fields": [
     {
       "path": "id",
