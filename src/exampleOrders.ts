@@ -1,4 +1,4 @@
-import { Order, AutoEngUpdateStatus } from "./schemas/orders";
+import { Order, AutoEngUpdateStatus } from "./internal/orders";
 
 /**
  * Sample orders for testing your filter implementation.

@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import { OrderSchema } from "./schemas/orders";
+import { OrderSchema } from "./orders";
 import { introspectSchema, FieldMetadata } from "./introspection";
 
 console.log("=".repeat(80));

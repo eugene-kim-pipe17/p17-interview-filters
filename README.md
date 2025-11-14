@@ -19,13 +19,14 @@ Your task is to design the data structure (type/schema) for this filter and impl
 
 **Prerequisites:** Ensure Node.js is installed on your machine.
 
+**Note:** You can ignore files in the `src/internal/` directory - those are for internal implementation details only.
+
 1. **Install dependencies**: Run `npm install` in the project root directory (where package.json is located). This installs the packages needed for type hints/IntelliSense in your editor and for running tests.
 
 2. **Understand the Order structure:**
-   - `src/schemas/orders.ts` defines the actual Order type (nested structure with customer, billingAddress, payment, etc.)
-   - `src/exampleOrders.ts` contains sample Order objects you can use for testing
-   - `src/types.ts` contains `FlattenedOrderSchema` - a flattened view where nested properties like `billingAddress.addressLine1` appear alongside top-level properties like `status`
-   - The flattened schema shows all available field paths, their types, and valid operators for filtering
+   - `src/exampleOrders.ts` contains sample Order objects - use these to understand what an order looks like and for testing
+   - `src/filter.ts` contains `FlattenedOrderSchema` - a flattened view where nested properties like `billingAddress.addressLine1` appear alongside top-level properties like `status`
+   - Hint: **Focus on field types, not the specific fields**: There are many fields (32+), but what matters is understanding the different field types (string, enum, number, etc.) and their valid operators
 
 3. Look at filter.gif to understand the user interface and discuss how you think the filter works from the user's perspective (not how it's implemented).
 
