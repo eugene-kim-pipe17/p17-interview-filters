@@ -17,19 +17,26 @@ Your task is to design the data structure (type/schema) for this filter and impl
 
 # Instructions
 
-1. Run `npm install` to install the dependencies.
+**Prerequisites:** Ensure Node.js is installed on your machine.
 
-2. **Examine `src/types.ts`:**
-   - `FlattenedOrderSchema` shows all available field paths, types, and valid operators
-   - Nested properties like `billingAddress.addressLine1` appear alongside top-level properties like `status`
+1. **Install dependencies**: Run `npm install` in the project root directory (where package.json is located). This installs the packages needed for type hints/IntelliSense in your editor and for running tests.
 
-3. Look at screenshot.png or filter.gif to understand the user interface and discuss how you think the filter works from the user's perspective (not how it's implemented).
+2. **Understand the Order structure:**
+   - `src/schemas/orders.ts` defines the actual Order type (nested structure with customer, billingAddress, payment, etc.)
+   - `src/exampleOrders.ts` contains sample Order objects you can use for testing
+   - `src/types.ts` contains `FlattenedOrderSchema` - a flattened view where nested properties like `billingAddress.addressLine1` appear alongside top-level properties like `status`
+   - The flattened schema shows all available field paths, their types, and valid operators for filtering
 
-4. You can run tests with `npm run test`.
+3. Look at filter.gif to understand the user interface and discuss how you think the filter works from the user's perspective (not how it's implemented).
 
-5. You can run type checking with `npm run compile`.
+4. **Run tests**: `npm run test` (or `npm test`) runs the test suite.
 
-6. Fill out filters.ts and filter.test.ts to implement the filter.
+5. **Type check**: `npm run compile` verifies TypeScript types without running the code.
+
+6. **Your tasks:**
+   - Define the `Filter` type in src/filter.ts
+   - Implement the `evaluateFilter` function in src/filter.ts
+   - Write tests in src/filter.test.ts
 
 # Recommended Approach
 
@@ -45,7 +52,7 @@ Your task is to design the data structure (type/schema) for this filter and impl
 
 # AI Tools During Your Interview
 
-Use AI tools freely (Claude Code, Cursor, etc.) — we want to see how you think, decide, and collaborate with AI, not whether you can out-code it. We can provide an Anthropic API key if needed.
+You'll use AI tools (Claude Code, Cursor, etc.) during this interview. We want to see how you think, decide, and collaborate with AI, not whether you can out-code it. We can provide an Anthropic API key if needed.
 
 ## What I'm Looking For
 
