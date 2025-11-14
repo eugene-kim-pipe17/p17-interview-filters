@@ -89,14 +89,6 @@ const FIELD_TYPE_OPERATORS = {
     "in_last",
     "older_than",
   ] as const,
-  array: [
-    "length_equals",
-    "length_gt",
-    "length_lt",
-    "array_contains",
-    "array_is_empty",
-  ] as const,
-  boolean: ["equals"] as const,
 };
 
 /**
@@ -169,12 +161,6 @@ export const FlattenedOrderSchema: { fields: FlattenedField[] } = {
     {
       "path": "customer.email",
       "type": "email",
-      "isOptional": false
-    },
-    {
-      "path": "items",
-      "type": "array",
-      "arrayItemType": "string",
       "isOptional": false
     },
     {
