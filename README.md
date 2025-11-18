@@ -19,7 +19,7 @@ The user wants to see orders where ALL the following conditions are true:
 * The order's currency equals "USD"
 
 Your task is to
-(1) design the data structure (type/schema) for the order filter and
+(1) design the data structure (type/schema) for the order filter. HINT: Write the example filter above as JSON to help you design the type/schema.
 (2) implement the logic to evaluate whether an order matches the filter criteria.
 
 **Important:** The Filter is pure data (like JSON/DTO) that gets persisted to the database. You'll define the Filter type and implement `evaluateFilter` to evaluate it.

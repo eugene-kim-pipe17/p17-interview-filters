@@ -1,7 +1,6 @@
 import { Order } from "./internal/orders";
 
 export type Filter = {
-  assessmentMode: "all" | "any";
   // TODO: Define this type/schema to represent the complete "Advanced Filter" from the screenshot
   //
   // Think of a "type" as defining the shape/structure of data:
